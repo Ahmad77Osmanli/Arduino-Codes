@@ -7,8 +7,8 @@ const char* ssid     = "YOUR_WIFI_SSID";
 const char* password = "YOUR_WIFI_PASSWORD";
 
 // ===== Telegram Bot Settings =====
-String botToken = "8393506584:AAHSIbm0QtC8OnWK3AMhamsTTXOjki3XZEs";   
-String chatID   = "6507966671";
+String botToken = "YOUR_BOT_TOKEN";
+String chatID   = "YOUR_CHAT_ID";
 
 // ===== Behavior =====
 const unsigned long HELP_COOLDOWN = 60000UL; // 60s cooldown to avoid spamming
@@ -122,3 +122,4 @@ void loop() {
     delay(1000);
   }
 }
+
