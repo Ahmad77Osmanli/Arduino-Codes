@@ -11,12 +11,12 @@ String CHAT_ID   = "6507966671";
 String Message = "EMERGENCY ALERT — HELP NEEDED                                                  LiftPad Unit: 0000001                                                                                Coordinates: 40.41924 N, 49.91664 E                                                                 Maps: https://maps.google.com/?q=40.41924,49.91664                        The Help command has been activated. Immediate assistance required.";
 
 // Pins to monitor
-const int HELP_PIN  = D1; // GPIO5 (input)
-const int EVENT_PIN = D2; // GPIO4 (unused here but left for future)
-const int ALARM_PIN = D3; // GPIO0 (output) -> drive an alarm (use transistor/driver if needed)
+const int HELP_PIN  = D1; 
+const int EVENT_PIN = D2; 
+const int ALARM_PIN = D3; 
 
 // Alarm duration and debounce
-const unsigned long ALARM_DURATION_MS = 20000UL; // 60 seconds
+const unsigned long ALARM_DURATION_MS = 20000UL; 
 const unsigned long HELP_DEBOUNCE_MS  = 50UL;    // debounce for the HELP button
 
 WiFiClientSecure client;
@@ -60,8 +60,8 @@ void setup() {
   Serial.begin(115200);
   delay(200);
 
-  pinMode(HELP_PIN, INPUT);        // consider INPUT_PULLUP if your button pulls to GND
-  pinMode(EVENT_PIN, INPUT);       // unused for now
+  pinMode(HELP_PIN, INPUT);        
+  pinMode(EVENT_PIN, INPUT);       
   pinMode(ALARM_PIN, OUTPUT);
   digitalWrite(ALARM_PIN, LOW);    // ensure alarm is off at boot
 
@@ -108,3 +108,4 @@ void loop() {
   // small yield to keep WiFi stack happy and reduce CPU usage
   delay(10);
 }
+
