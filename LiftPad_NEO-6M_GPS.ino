@@ -1,8 +1,8 @@
 #include <TinyGPS++.h>
 #include <SoftwareSerial.h>
 
-static const int RXPin = D4;
-static const int TXPin = D3; 
+static const int RXPin = D6;
+static const int TXPin = D5; 
 static const uint32_t GPSBaud = 9600;
 
 // The TinyGPS++ object
@@ -36,4 +36,5 @@ void loop() {
     }
   }
 }
+
 
