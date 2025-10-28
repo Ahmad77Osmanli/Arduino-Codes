@@ -18,7 +18,7 @@ void loop() {
   Serial.println(gasValue);   // Serial monitorda yazdır
 
   // Təhlükə üçün sadə şərt
-  if (gasValue > 200) {       // 500-dən yuxarı dəyərlərdə təhlükə
+  if (gasValue > 200) {       // 200-dən yuxarı dəyərlərdə təhlükə
     digitalWrite(LED_PIN, HIGH);    
     digitalWrite(BUZZER_PIN, HIGH);
   } else {
@@ -28,3 +28,4 @@ void loop() {
 
   delay(500);  // yarım saniyəlik gecikmə
 }
+
